@@ -29,6 +29,20 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.13;
+    background: url('data:image/svg+xml;utf8,<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="200" cy="200" rx="180" ry="120" fill="%23FFD23F" fill-opacity="0.7"/><path d="M80 220 Q200 100 320 220 Q300 320 200 320 Q100 320 80 220 Z" fill="%23FF6B35" fill-opacity="0.7"/><ellipse cx="200" cy="230" rx="110" ry="40" fill="%23fff" fill-opacity="0.25"/><ellipse cx="200" cy="210" rx="90" ry="25" fill="%23FF006E" fill-opacity="0.18"/><ellipse cx="200" cy="250" rx="70" ry="18" fill="%233A86FF" fill-opacity="0.13"/></svg>') no-repeat center center/90vw 60vw;
 }
 
 /* HEADER Y NAVBAR - OPTIMIZADO PARA MÓVIL */
@@ -128,6 +142,20 @@ main {
     background: rgba(38, 38, 64, 0.4);
     border-bottom: 2px solid var(--secondary);
     margin-top: 25px;
+    text-align: center;
+    position: relative;
+}
+
+.section-icon {
+    font-size: 2.5em;
+    margin-bottom: 8px;
+    display: block;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-8px) rotate(5deg); }
 }
 
 .section-title {
@@ -165,6 +193,21 @@ main {
     transition: all 0.2s ease;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-emoji {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-align: center;
+    display: block;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
 }
 
 .menu-item::before {
@@ -360,4 +403,9 @@ main {
     .item-price {
         font-size: 1.1em;
     }
+}
+
+main, header, .footer {
+    position: relative;
+    z-index: 2;
 }
