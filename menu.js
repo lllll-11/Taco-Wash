@@ -7,7 +7,6 @@ const menuData = {
             "description": "Nuestros tacos probados y aprobados. Todos los tacos estan echos con tortilla de maiz.",
             "items": [
                 {"name": "Taco de pastor", "price": 18.00, "ingredients": "Pastor, cebolla, cilantro.", "stars": 4, "emoji": ""},
-                {"name": "Taco de bistec", "price": 18.00, "ingredients": "Bistec, Cebolla, Cilantro.", "stars": 4, "emoji": ""},
                 {"name": "Taco de chuleta", "price": 18.00, "ingredients": "Chuleta, Cebolla, Cilantro.", "stars": 4, "emoji": ""},
                 {"name": "Taco de cesina", "price": 18.00, "ingredients": "Cesina, Cebolla, Cilantro.", "stars": 4, "emoji": ""},
                 {"name": "Taco de chorizo", "price": 18.00, "ingredients": "Chorizo, Cebolla, Cilantro.", "stars": 4, "emoji": ""},
