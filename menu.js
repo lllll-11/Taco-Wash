@@ -6,11 +6,12 @@ const menuData = {
             "icon": "🌮",
             "description": "Nuestros tacos probados y aprobados. Todos los tacos estan echos con tortilla de maiz.",
             "items": [
-                {"name": "Taco de pastor", "price": 18.00, "ingredients": "Pastor, cebolla, cilantro.", "stars": 4, "emoji": ""},
+                {"name": "Taco de pastor (2x1)", "price": 18.00, "ingredients": "Pastor, cebolla, cilantro.", "stars": 4, "emoji": ""},
                 {"name": "Taco de bistec", "price": 18.00, "ingredients": "Bistec, Cebolla, Cilantro.", "stars": 4, "emoji": ""},
                 {"name": "Taco de chuleta", "price": 18.00, "ingredients": "Chuleta, Cebolla, Cilantro.", "stars": 4, "emoji": ""},
                 {"name": "Taco de cesina", "price": 18.00, "ingredients": "Cesina, Cebolla, Cilantro.", "stars": 4, "emoji": ""},
                 {"name": "Taco de chorizo", "price": 18.00, "ingredients": "Chorizo, Cebolla, Cilantro.", "stars": 4, "emoji": ""},
+                {"name": "Taco combinado", "price": 20.00, "ingredients": "Carne de su eleccion, Cilantro, cebolla.", "stars": 5, "emoji": ""},
                 {"name": "Taco campechano", "price": 24.00, "ingredients": "Bistec, Chorizo, Cilantro, cebolla.", "stars": 5, "emoji": ""},
             ]
         },
@@ -29,14 +30,37 @@ const menuData = {
                         "icon": "",
             "description": " Todo lo que necesitas para saciar ese antojo.",
             "items": [
-                {"name": "Tlayuda Pequeña", "price": 120.00, "ingredients": "Carne de su eleccion, con quesillo Oaxaca, frijol, con o sin verdura", "stars": 4, "emoji": ""},
-                {"name": "Tlayuda Mediana", "price": 140.00, "ingredients": "Carne de su eleccion, con quesillo Oaxaca, frijol, con o sin verdura", "stars": 4, "emoji": ""},
-                {"name": "Tlayuda Grande", "price": 150.00, "ingredients": "Carne de su eleccion, con quesillo Oaxaca, frijol, con o sin verdura", "stars": 5, "emoji": ""},
-                {"name": "Tlayuda Combinada", "price": 150.00, "ingredients": "Carne de su eleccion, con quesillo Oaxaca, frijol, con o sin verdura", "stars": 5, "emoji": ""},
-                {"name": "Quesadilla", "price": 35.00, "ingredients": "Carne de su eleccion, con quesillo Oaxaca, con tortilla de harina a mano.", "stars": 4, "emoji": ""},
-                {"name": "Gringas", "price": 45.00, "ingredients": "Carne de su eleccion, con quesillo Oaxaca, entre dos tortillas de harina", "stars": 3, "emoji": ""}
+                {"name": "Tlayuda sencilla", "price": 100.00, "ingredients": "Carne de su eleccion, con quesillo Oaxaca, frijol, con o sin verdura", "stars": 4, "emoji": ""},
+                {"name": "Tlayuda doble", "price": 115.00, "ingredients": "Dos carnes de su eleccion, con quesillo Oaxaca, frijol, con o sin verdura", "stars": 4, "emoji": ""},
+                {"name": "Tlayuda triple", "price": 130.00, "ingredients": "Tres carnes de su eleccion, con quesillo Oaxaca, frijol, con o sin verdura", "stars": 5, "emoji": ""},
+                {"name": "Tlayuda Estilo Oaxaca", "price": 200.00, "ingredients": "Ps una tlayuda estilo Oaxaca", "stars": 5, "emoji": ""},
+                {"name": "Quesadilla", "price": 25.00, "ingredients": "Carne de su eleccion, con quesillo Oaxaca, con tortilla de harina a mano.", "stars": 4, "emoji": ""},
+                {"name": "Gringa", "price": 45.00, "ingredients": "Carne de su eleccion, con quesillo Oaxaca, entre dos tortillas de harina", "stars": 3, "emoji": ""}
             ]
         },
+        {
+            "title": "Tortas",
+                        "icon": "",
+            "description": "Que no falten nunca las tortas.",
+            "items": [
+                {"name": "Torta bistec", "price": 60.00, "ingredients": "Bistec, con quesillo Oaxaca, mayonesa, aguacate ", "stars": 5, "emoji": ""},
+                {"name": "Torta chuleta", "price": 60.00, "ingredients": "Chuleta, con quesillo Oaxaca, mayonesa, aguacate ", "stars": 5, "emoji": ""},
+                {"name": "Torta Choriqueso", "price": 50.00, "ingredients": "Chorizo, con quesillo Oaxaca, mayonesa, aguacate ", "stars": 5, "emoji": ""},
+                {"name": "Torta D' Alambre", "price": 65.00, "ingredients": "El alambre de su eleccion, con quesillo Oaxaca, mayonesa, aguacate ", "stars": 5, "emoji": ""},
+                {"name": "Torta pastor", "price": 70.00, "ingredients": "Pastor, con quesillo Oaxaca, mayonesa, aguacate ", "stars": 5, "emoji": ""},
+
+            ]
+        },
+                {
+                    "title": "Tips",
+                    "type": "tips",
+                    "icon": "🟢",
+                    "description": "Acompáñalos con un buen acompañamiento (tips).",
+                    "items": [
+                        {"name": "Porción de aguacate", "price": 25.00, "ingredients": "Aguacate fresco para acompañar.", "stars": 5, "emoji": "🥑"},
+                        {"name": "Papas a la francesa", "price": 35.00, "ingredients": "Papas crujientes con sal y limón.", "stars": 5, "emoji": "🍟"}
+                    ]
+                },
     ]
 };
 
@@ -58,7 +82,8 @@ function renderMenu() {
     menuData.sections.forEach(section => {
         // Crear header de sección
         const sectionHeader = document.createElement('div');
-        sectionHeader.className = 'section-header';
+        const sectionClass = 'section-header' + (section.type ? ' ' + section.type : '');
+        sectionHeader.className = sectionClass;
         sectionHeader.innerHTML = `
             <div class="section-icon">${section.icon}</div>
             <h2 class="section-title">${section.title}</h2>
@@ -72,7 +97,7 @@ function renderMenu() {
 
         section.items.forEach(item => {
             const itemCard = document.createElement('div');
-            itemCard.className = 'menu-item';
+            itemCard.className = 'menu-item' + (section.type ? ' ' + section.type : '');
 
             const starsHTML = generateStars(item.stars || 5);
 
