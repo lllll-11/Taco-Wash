@@ -1,6 +1,25 @@
-// 🍔 DATOS DEL MENÚ
 const menuData = {
-    "sections": [
+    "sections": [                {
+                    "title": "Tips",
+                    "type": "tips",
+                    "icon": "🟢",
+                    "description": "Acompáñalos con un buen acompañamiento (tips).",
+                    "items": [
+                        {"name": "Porción de aguacate", "price": 25.00, "ingredients": "Aguacate fresco para acompañar.", "stars": 5, "emoji": "🥑"},
+                        {"name": "Papas a la francesa", "price": 35.00, "ingredients": "Papas crujientes con sal.", "stars": 5, "emoji": "🍟"}
+                    ]
+                },
+                        {
+                    "title": "Bebidas",
+                    "type": "drinks",
+                    "icon": "",
+                    "description": "Bebidas y aguas frescas disponibles hoy.",
+                    "items": [
+                        {"name": "Agua de sabor GRATIS!!", "price": 0.00, "ingredients": "1 litro - disponible hoy, gratis.", "stars": 5, "emoji": ""}
+                    ]
+                },
+
+
         {
             "title": "LOS CLÁSICOS",
             "icon": "🌮",
@@ -9,7 +28,7 @@ const menuData = {
                 {"name": "Taco de pastor (2x1)", "price": 18.00, "ingredients": "Pastor, cebolla, cilantro.", "stars": 4, "emoji": ""},
                 {"name": "Taco de bistec", "price": 18.00, "ingredients": "Bistec, Cebolla, Cilantro.", "stars": 4, "emoji": ""},
                 {"name": "Taco de chuleta", "price": 18.00, "ingredients": "Chuleta, Cebolla, Cilantro.", "stars": 4, "emoji": ""},
-                {"name": "Taco de cesina", "price": 18.00, "ingredients": "Cesina, Cebolla, Cilantro.", "stars": 4, "emoji": ""},
+                {"name": "Taco de cecina", "price": 18.00, "ingredients": "Cecina, Cebolla, Cilantro.", "stars": 4, "emoji": ""},
                 {"name": "Taco de chorizo", "price": 18.00, "ingredients": "Chorizo, Cebolla, Cilantro.", "stars": 4, "emoji": ""},
                 {"name": "Taco combinado", "price": 20.00, "ingredients": "Carne de su eleccion, Cilantro, cebolla.", "stars": 5, "emoji": ""},
                 {"name": "Taco campechano", "price": 24.00, "ingredients": "Bistec, Chorizo, Cilantro, cebolla.", "stars": 5, "emoji": ""},
@@ -51,20 +70,9 @@ const menuData = {
 
             ]
         },
-                {
-                    "title": "Tips",
-                    "type": "tips",
-                    "icon": "🟢",
-                    "description": "Acompáñalos con un buen acompañamiento (tips).",
-                    "items": [
-                        {"name": "Porción de aguacate", "price": 25.00, "ingredients": "Aguacate fresco para acompañar.", "stars": 5, "emoji": "🥑"},
-                        {"name": "Papas a la francesa", "price": 35.00, "ingredients": "Papas crujientes con sal y limón.", "stars": 5, "emoji": "🍟"}
-                    ]
-                },
     ]
 };
 
-// 🌟 FUNCIÓN PARA GENERAR ESTRELLAS
 function generateStars(count) {
     let stars = '';
     for (let i = 0; i < 5; i++) {
@@ -74,13 +82,11 @@ function generateStars(count) {
     return stars;
 }
 
-// 🚀 LÓGICA DE RENDERIZADO - NUEVO DISEÑO
 function renderMenu() {
     const container = document.getElementById('menu-container');
     container.innerHTML = '';
 
     menuData.sections.forEach(section => {
-        // Crear header de sección
         const sectionHeader = document.createElement('div');
         const sectionClass = 'section-header' + (section.type ? ' ' + section.type : '');
         sectionHeader.className = sectionClass;
@@ -91,7 +97,6 @@ function renderMenu() {
         `;
         container.appendChild(sectionHeader);
 
-        // Crear grid de items
         const itemsGrid = document.createElement('div');
         itemsGrid.className = 'items-grid';
 
@@ -120,5 +125,4 @@ function renderMenu() {
     });
 }
 
-// Ejecuta la función al cargar la página
 document.addEventListener('DOMContentLoaded', renderMenu);
