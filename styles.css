@@ -35,14 +35,20 @@ body {
 body::before {
     content: '';
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120vw;
+    height: 65vh;
     z-index: 0;
     pointer-events: none;
-    opacity: 0.13;
-    background: url('data:image/svg+xml;utf8,<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="200" cy="200" rx="180" ry="120" fill="%23FFD23F" fill-opacity="0.7"/><path d="M80 220 Q200 100 320 220 Q300 320 200 320 Q100 320 80 220 Z" fill="%23FF6B35" fill-opacity="0.7"/><ellipse cx="200" cy="230" rx="110" ry="40" fill="%23fff" fill-opacity="0.25"/><ellipse cx="200" cy="210" rx="90" ry="25" fill="%23FF006E" fill-opacity="0.18"/><ellipse cx="200" cy="250" rx="70" ry="18" fill="%233A86FF" fill-opacity="0.13"/></svg>') no-repeat center center/90vw 60vw;
+    opacity: 0.12;
+    background-image: url('logo.png');
+    background-repeat: no-repeat;
+    background-position: center 5%;
+    background-size: 120vw auto;
+    filter: blur(6px) saturate(1.1);
+    mix-blend-mode: screen;
 }
 
 header {
@@ -69,11 +75,28 @@ header {
 }
 
 .logo {
-    font-size: 1.3em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.05em;
     font-weight: 900;
     color: var(--secondary);
     letter-spacing: 1px;
     flex: 1;
+}
+
+.brand-logo {
+    width: 44px;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+}
+
+.brand-text {
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: var(--secondary);
 }
 
 .nav-info {
