@@ -109,15 +109,11 @@ function renderMenu() {
 
             const starsHTML = generateStars(item.stars || 5);
 
-            const priceHTML = (item.price === 0) ?
-                `<div class="item-price free">Gratis</div>` :
-                `<div class="item-price">$${item.price.toFixed(2)}</div>`;
-
             itemCard.innerHTML = `
                 <div class="item-emoji">${item.emoji}</div>
                 <div class="item-header">
                     <h3 class="item-name">${item.name}</h3>
-                    ${priceHTML}
+                    <div class="item-price">$${item.price.toFixed(2)}</div>
                 </div>
                 <div class="item-rating">
                     ${starsHTML}
