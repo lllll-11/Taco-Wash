@@ -32,7 +32,7 @@ const menuData = {
             "items": [
                 {"name": "El 'Soap Suds' (Gratinado)", "price": 35.00, "ingredients": "Bistec y Chorizo, gratinados con queso Oaxaca, sobre tortilla de harina.", "stars": 3, "emoji": ""},
                 {"name": "Taco Tijuano", "price": 80.00, "ingredients": "carne al gusto, con una capa de aguacate triturado, sobre tortilla de maiz, al estilo Tijuana.", "stars": 5, "emoji": ""},
-                {"name": "Costra 'Dry Clean'", "price": 45.00, "ingredients": "Queso frito crujiente que envuelve carne al pastor, sin tortilla.", "stars": 3, "emoji": ""}
+                {"name": "Costra 'Dry Clean'", "price": 45.00, "ingredients": "Queso frito crujiente que envuelve carne al pastor, sin tortilla.", "stars": 3, "emoji": ""},
                 {"name": "El taco Costra Meat", "price": 25.00, "ingredients": "Carne de su eleccion, con tortilla de maiz, con queso gratinado encmima.", "stars": 3, "emoji": ""}
 
             ]
