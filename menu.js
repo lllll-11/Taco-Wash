@@ -43,11 +43,11 @@ const menuData = {
                         "icon": "",
             "description": " Todo lo que necesitas para saciar ese antojo.",
             "items": [
-                {"name": "Tlayuda sencilla", "price": 100.00, "ingredients": "Carne de su eleccion, con queso Oaxaca, frijol, con o sin verdura", "stars": 4, "emoji": ""},
-                {"name": "Tlayuda doble", "price": 115.00, "ingredients": "Dos carnes de su eleccion, con queso Oaxaca, frijol, con o sin verdura", "stars": 4, "emoji": ""},
-                {"name": "Tlayuda triple", "price": 130.00, "ingredients": "Tres carnes de su eleccion, con queso Oaxaca, frijol, con o sin verdura", "stars": 5, "emoji": ""},
-                {"name": "Tlayuda Estilo Oaxaca", "price": 200.00, "ingredients": "Ps una tlayuda estilo Oaxaca", "stars": 5, "emoji": ""},
-                {"name": "Quesadilla", "price": 25.00, "ingredients": "Carne de su eleccion, con queso Oaxaca, con tortilla de harina a mano.", "stars": 4, "emoji": ""},
+                {"name": "Tlayuda sencilla", "price": 100.00, "ingredients": "Carne de su eleccion, con queso Oaxaca, frijol, con verdura", "stars": 4, "emoji": ""},
+                {"name": "Tlayuda doble", "price": 115.00, "ingredients": "Dos carnes de su eleccion, con queso Oaxaca, frijol, con verdura", "stars": 4, "emoji": ""},
+                {"name": "Tlayuda triple", "price": 130.00, "ingredients": "Tres carnes de su eleccion, con queso Oaxaca, frijol, con verdura", "stars": 5, "emoji": ""},
+                {"name": "Tlayuda Estilo Oaxaca", "price": 200.00, "ingredients": "carne de su eleccion, con queso Oaxaca, frijol, con verdura", "stars": 5, "emoji": ""},
+                {"name": "Quesadilla", "price": 25.00, "ingredients": "Carne de su eleccion, con queso Oaxaca, tortilla de harina.", "stars": 4, "emoji": ""},
                 {"name": "Gringa", "price": 45.00, "ingredients": "Carne de su eleccion, con queso Oaxaca, entre dos tortillas de harina", "stars": 3, "emoji": ""}
             ]
         },
@@ -72,7 +72,7 @@ const menuData = {
                 {"name": "refresco de 600ml", "price": 25.00, "ingredients": "Cualquier refresco que usted quiera", "stars": 5, "emoji": ""},
                 {"name": "refresco de 1L", "price": 50.00, "ingredients": "Cualquier refresco que usted quiera", "stars": 5, "emoji": ""},
                 {"name": "refresco de 3L", "price": 65.00, "ingredients": "Cualquier refresco que usted quiera", "stars": 5, "emoji": ""},
-                {"name": "Agua de 1L", "price": 25.00, "ingredients": "Cualquier sabor que usted quiera", "stars": 5, "emoji": ""},
+                {"name": "Agua de 1L", "price": 30.00, "ingredients": "Cualquier sabor que usted quiera", "stars": 5, "emoji": ""},
             ]
         },
 
